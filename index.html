@@ -1,0 +1,198 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Mahasiswa - Mas Adam</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            color: #183153;
+            background: linear-gradient(135deg, #eaf3ff, #f7faff);
+            line-height: 1.7;
+        }
+
+        header {
+            background-color: #145da0;
+            color: white;
+            text-align: center;
+            padding: 42px 20px;
+        }
+
+        header h1 {
+            margin: 0 0 8px;
+            font-size: 35px;
+        }
+
+        header p {
+            margin: 0;
+        }
+
+        main {
+            width: 92%;
+            max-width: 900px;
+            margin: 32px auto;
+        }
+
+        section {
+            background-color: white;
+            border-radius: 16px;
+            padding: 26px;
+            margin-bottom: 20px;
+            box-shadow: 0 8px 24px rgba(20, 93, 160, 0.09);
+        }
+
+        h2 {
+            color: #145da0;
+            margin-top: 0;
+        }
+
+        .identity {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-top: 18px;
+        }
+
+        .identity span {
+            background-color: #e8f2ff;
+            border: 1px solid #c9e0fa;
+            border-radius: 999px;
+            padding: 7px 14px;
+            font-weight: bold;
+        }
+
+        button {
+            border: none;
+            border-radius: 10px;
+            padding: 12px 20px;
+            background-color: #145da0;
+            color: white;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: 0.2s;
+        }
+
+        button:hover {
+            background-color: #0d4172;
+            transform: translateY(-2px);
+        }
+
+        #pesan {
+            margin-top: 14px;
+            padding: 12px;
+            border-left: 4px solid #145da0;
+            background-color: #eef6ff;
+            border-radius: 6px;
+            min-height: 48px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #62758b;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Halo, Selamat Datang!</h1>
+        <p>Website sederhana untuk memperkenalkan diri dan mengenal dunia teknologi.</p>
+    </header>
+
+    <main>
+
+        <!-- Bagian Profil -->
+        <section>
+            <h2>Mas Adam Gustiawan</h2>
+
+            <p>
+                Perkenalkan, saya Mas Adam. Saya merupakan mahasiswa
+                yang tertarik mempelajari perkembangan teknologi informasi,
+                khususnya dalam bidang pemrograman dan pembuatan website.
+            </p>
+
+            <p>
+                Saya membuat halaman ini sebagai latihan dasar
+                pemrograman web. Melalui tugas ini, saya belajar
+                menggabungkan HTML untuk menyusun struktur halaman,
+                CSS untuk mengatur tampilan, dan JavaScript untuk
+                menambahkan interaksi.
+            </p>
+
+            <div class="identity">
+                <span>Nama: Mas Adam</span>
+                <span>NIM: 242011013</span>
+            </div>
+        </section>
+
+        <!-- Bagian Minat -->
+        <section>
+            <h2>Minat dan Tujuan Belajar</h2>
+
+            <p>
+                Salah satu hal yang ingin saya kuasai adalah cara
+                membuat website yang rapi, mudah digunakan, dan dapat
+                diakses melalui berbagai perangkat.
+            </p>
+
+            <p>
+                Ke depannya, saya berharap dapat mengembangkan
+                kemampuan tersebut melalui latihan dan proyek sederhana,
+                sehingga ilmu yang dipelajari di perkuliahan bisa
+                diterapkan dalam pembuatan aplikasi yang bermanfaat.
+            </p>
+        </section>
+
+        <!-- Bagian Interaksi -->
+        <section>
+            <h2>Ayo Coba Berinteraksi</h2>
+
+            <p>
+                Come on Klik agar Kamu Tau
+            </p>
+
+            <button onclick="tampilkanPesan()">
+                Klik Saya
+            </button>
+
+            <div id="pesan">
+                Pesan akan muncul di sini.
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        © 2026 | Website Profil Mahasiswa - Mas Adam (242011013)
+    </footer>
+
+    <script>
+        function tampilkanPesan() {
+
+            const sekarang = new Date();
+
+            const waktu = sekarang.toLocaleString('id-ID', {
+                dateStyle: 'full',
+                timeStyle: 'medium'
+            });
+
+            document.getElementById("pesan").textContent =
+                "Halo, Mas Adam! Tombol berhasil dijalankan. Waktu saat ini: "
+                + waktu;
+        }
+    </script>
+
+</body>
+</html>
